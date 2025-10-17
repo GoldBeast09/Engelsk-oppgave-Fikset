@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 .Nav{
     display: flex;
     flex-direction: row;
