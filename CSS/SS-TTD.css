@@ -1,0 +1,99 @@
+
+.Nav{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    height: 75px;
+}
+.Item-Home{
+    display: flex;
+    margin-right: 5rem;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.Item-Home:hover{
+    background-color: rgba(8, 8, 8, 0.75) ;
+    border-radius: 10px;
+}
+
+
+
+
+.Item-Center{
+    display: flex;
+    margin-left: 1rem;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.Item-Center:hover{
+    background-color: rgba(8, 8, 8, 0.75);
+    border-radius: 10px;
+}
+
+.Text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+/* Lager et 2x2 grid under nav baren*/
+.Main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr);    
+    gap: 10px;
+    margin-top: 50px;
+    padding: 150px;
+}
+
+.Main > div {
+    border-radius: 10px;
+    min-height: 200px;
+    min-width: 150px;
+    position: relative;
+    /* Removed flex so absolute anchor fills box */
+}
+.FullBoxLink {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Item-Grid2, .Item-Grid3, .Item-Grid4 {
+    background: rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Item-Grid1{
+    background-image: url(../Bilder/israel-albornoz-X_yiZP3NTkE-unsplash.jpg);
+    background-size: cover;      /* Makes the image cover the box */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;/* Prevents tiling */
+}
+
+#PTE-Text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}

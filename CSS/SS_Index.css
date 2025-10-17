@@ -1,0 +1,64 @@
+.Nav{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+}
+
+.Item-Center{
+    display: flex;
+    margin-left: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.Item-Center:hover{
+    background-color: rgba(8, 8, 8, 0.75);
+    border-radius: 10px;
+}
+.Text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+.BGvideo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .BGvideo{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    .BGvideo{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.Welcome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: xx-large;
+}
+
+#Welcome-Text{
+    background-color: rgba(255, 255, 255, 0.15);
+}
