@@ -1,4 +1,6 @@
-
+body{
+    background-color: rgba(0, 0, 0, 0.5);
+}
 .Nav{
     display: flex;
     flex-direction: row;
@@ -46,11 +48,12 @@
     color: white;
     text-decoration: none;
 }
-/* Lager et 2x2 grid under nav baren*/
+
 .Main{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    grid-template-rows: repeat(2, 1fr);    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
     margin-top: 50px;
     padding: 150px;
@@ -58,10 +61,9 @@
 
 .Main > div {
     border-radius: 10px;
-    min-height: 200px;
-    min-width: 150px;
+    height: max(200px, 50vh, 300px);
+    width: max(200px, 33vw, 500px);
     position: relative;
-    /* Removed flex so absolute anchor fills box */
 }
 .FullBoxLink {
     position: absolute;
@@ -76,24 +78,30 @@
     justify-content: center;
 }
 
-.Item-Grid2, .Item-Grid3, .Item-Grid4 {
-    background: rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.Item-Grid1{
+.Item-Flex1{
     background-image: url(../Bilder/israel-albornoz-X_yiZP3NTkE-unsplash.jpg);
     background-size: cover;      /* Makes the image cover the box */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat;/* Prevents tiling */
 }
 
-#PTE-Text{
+.Text_over_picture{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
     font-weight: bold;
     color: white;
     text-decoration: none;
     background-color: rgba(0, 0, 0, 0.5);
+}
+.Item-Flex2{
+    background-image: url(../Bilder/3x2_westernstyle_couple_03_2399x1600.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.Item-Flex3{
+    background-image: url(../Bilder/bullock-museum-austin.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
