@@ -54,9 +54,9 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 2rem;
     margin-top: 50px;
-    padding: 150px;
+    padding-top: 150px;
 }
 
 .Main > div {

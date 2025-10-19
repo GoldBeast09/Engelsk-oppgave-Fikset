@@ -1,4 +1,6 @@
-
+body{
+    background-color: rgba(0, 0, 0, 0.5);
+}
 .Nav{
     display: flex;
     flex-direction: row;
@@ -45,4 +47,37 @@
     font-weight: bold;
     color: white;
     text-decoration: none;
+}
+
+main {
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: calc(100vh - 75px);
+    position: relative;
+    z-index: 1;
+}
+.history-image1 img{
+    max-width: 100%;
+    width: min(900px, 95%);
+    height: 300px;      
+    object-fit: cover;  
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+.history1, .history2{
+    background: rgba(255,255,255,0.12); 
+    padding: 1.25rem;
+    border-radius: 10px;
+    color: white; 
+    line-height: 1.5;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+@media (max-width: 768px){
+    .history-grid{
+        grid-template-columns: 1fr;
+    }
 }
