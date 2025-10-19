@@ -1,3 +1,6 @@
+body{
+    background-color: rgba(0, 0, 0, 0.5);
+}
 .Nav{
     display: flex;
     flex-direction: row;
@@ -44,4 +47,58 @@
     font-weight: bold;
     color: white;
     text-decoration: none;
+}
+
+main{
+    padding-top: 90px; /* space for fixed header */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: calc(100vh - 90px);
+    box-sizing: border-box;
+}
+
+/* card that holds image + text, image on top, text below and centered */
+.Fort-worth-stockyards{
+    width: min(900px, 95%);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* image: full width of the card, shorter height, keep aspect with object-fit */
+.Fort-worth-stockyards img{
+    width: 100%;
+    max-width: 900px;
+    height: 260px;          /* adjust height as needed */
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+/* headings and paragraphs centered and readable */
+.Fort-worth-stockyards h1{
+    margin: 0.25rem 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.Fort-worth-stockyards p{
+    margin: 0.5rem 0;
+    line-height: 1.5;
+    color: #fff;
+}
+
+/* responsive: reduce image height on small screens */
+@media (max-width: 600px){
+    .Fort-worth-stockyards img{
+        height: 180px;
+    }
 }
