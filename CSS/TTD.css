@@ -1,6 +1,12 @@
+:root{
+    --Text-Over-Picture: #F9FAFB;
+    --BG-Text-Over-Picture: #1e293b;
+}
 
-
-
+.lightmode{
+    --Text-Over-Picture: #111827;
+    --BG-Text-Over-Picture: #F9FAFB;
+}
 
 .Main{
     display: flex;
@@ -46,9 +52,9 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 4rem;
     font-weight: bold;
-    color: #F9FAFB;
+    color: var(--Text-Over-Picture);
     text-decoration: none;
-    background-color: rgba(30, 41, 59, 0.75);
+    background-color: var(--BG-Text-Over-Picture);
 }
 .Item-Flex2{
     background-image: url(../Bilder/3x2_westernstyle_couple_03_2399x1600.jpg);
