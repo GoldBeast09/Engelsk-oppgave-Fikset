@@ -3,13 +3,15 @@
     --BG-variant: #1E293B;
     --Text-Color: #F9FAFB;
     --Hover-Color: #334155;
+    --Border-Color: #334155;
 }
 
 .lightmode{
-    --BG-Color: #eeeff0;
+    --BG-Color: #dfe6ee;
     --BG-variant: #FFFFFF;
     --Text-Color: #111827;
     --Hover-Color: #c5c5c5;
+    --Border-Color: #E5E7EB;
 }
 
 
@@ -41,6 +43,7 @@ body{
     margin: 0;
     padding: 0;
     height: 75px;
+    border: solid 1px, var(--Border-Color);
 }
 
 
