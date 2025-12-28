@@ -31,19 +31,6 @@ main{
     display: block;
 }
 
-/* headings and paragraphs centered and readable */
-.Fort-worth-stockyards h1{
-    margin: 0.25rem 0;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #fff;
-}
-
-.Fort-worth-stockyards p{
-    margin: 0.5rem 0;
-    line-height: 1.5;
-    color: #fff;
-}
 
 /* responsive: reduce image height on small screens */
 @media (max-width: 600px){

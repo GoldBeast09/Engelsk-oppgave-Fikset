@@ -1,3 +1,13 @@
+:root{
+    --welcome-text: #F9FAFB;
+    --Welcome-BG: #1E293B;
+}
+
+.lightmode{
+    --welcome-text: #1E293B;
+    --Welcome-BG:  #F9FAFB;
+}
+
 body {
     overflow: hidden;
 }
@@ -28,10 +38,11 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    font-size: xx-large;
+    font-size: clamp(1rem, 2.5vw, 2.5rem);
 }
 
 #Welcome-Text{
-    background-color: #1E293B;
-    color: #F9FAFB;
+    background-color: var(--Welcome-BG);
+    color: var(--welcome-text);
+    padding: 0.5rem;
 }
