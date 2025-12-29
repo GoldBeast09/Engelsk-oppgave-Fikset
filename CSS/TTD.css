@@ -23,17 +23,15 @@ main > div {
     width: max(200px, 33vw, 500px);
     position: relative;
 }
-.FullBoxLink {
+
+.align-text{
     position: absolute;
-    inset: 0;
     width: 100%;
     height: 100%;
-    text-decoration: none;
-    color: inherit;
-    z-index: 10;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 .Item-Flex1{
