@@ -8,7 +8,7 @@
     --BG-Text-Over-Picture: #dfe6ee;
 }
 
-.Main{
+main{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -17,7 +17,7 @@
     margin-top: 200px;
 }
 
-.Main > div {
+main > div {
     border-radius: 10px;
     height: max(200px, 50vh, 300px);
     width: max(200px, 33vw, 500px);
