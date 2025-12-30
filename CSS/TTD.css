@@ -8,23 +8,43 @@
     --BG-Text-Over-Picture: #dfe6ee;
 }
 
+
 main{
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
-    margin-top: 200px;
+    flex-wrap: wrap;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 80px auto auto auto;
+    min-height: calc(100vh - 180px);
 }
 
 main > div {
+    flex: 1 1 250px;
+    min-width: 200px;
+    max-width: 500px;
+    height: 350px;
+    border: solid 2px;
     border-radius: 10px;
-    height: max(200px, 50vh, 300px);
-    width: max(200px, 33vw, 500px);
+    overflow: hidden;
     position: relative;
 }
 
+
+.zoom-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease ;
+}
+
+
+
 .align-text{
+    z-index: 1;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -34,45 +54,13 @@ main > div {
     text-decoration: none;
 }
 
-.Item-Flex1{
-    background-image: url(../Bilder/israel-albornoz-X_yiZP3NTkE-unsplash.jpg);
-    background-size: cover;      /* Makes the image cover the box */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat;/* Prevents tiling */
-}
-.Item-Flex1:hover{
-    transition: 0.4s ease;
-    transform: scale(1.05);
-}
-
 .Text_over_picture{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: clamp(1rem, 3vw, 4rem);
     font-weight: bold;
     color: var(--Text-Over-Picture);
-    text-decoration: none;
     background-color: var(--BG-Text-Over-Picture);
-    padding: 0.75rem;
-    border-radius: 20px;
-}
-.Item-Flex2{
-    background-image: url(../Bilder/3x2_westernstyle_couple_03_2399x1600.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.Item-Flex2:hover{
-    transition: 0.4s;
-    transform: scale(1.05);
+    font-size: clamp(1rem, 2.5vw, 4rem);
+    padding: 0.5rem;
+    border-radius: 10px;
 }
 
-.Item-Flex3{
-    background-image: url(../Bilder/bullock-museum-austin.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.Item-Flex3:hover{
-    transition: 0.4s;
-    transform: scale(1.05);
-}
