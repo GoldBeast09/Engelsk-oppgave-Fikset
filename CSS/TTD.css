@@ -42,15 +42,10 @@ main > div {
 }
 
 
-.Item-Flex1:hover .zoom-image{
+.Item-Flex1:hover .zoom-image, .Item-Flex2:hover .zoom-image, .Item-Flex3:hover .zoom-image{
     transform: scale(1.2);
 }
-.Item-Flex2:hover .zoom-image{
-    transform: scale(1.2);
-}
-.Item-Flex3:hover .zoom-image{
-    transform: scale(1.2);
-}
+
 
 .align-text{
     z-index: 1;
