@@ -68,8 +68,8 @@ main > div {
     font-weight: bold;
     color: var(--Text-Over-Picture);
     background-color: var(--BG-Text-Over-Picture);
-    font-size: clamp(1rem, 2.5vw, 4rem);
-    padding: 0.5rem;
+    font-size: clamp(1.75rem, 2.5vw, 5rem);
+    padding: 0.5em;
     border-radius: 10px;
 }
 
