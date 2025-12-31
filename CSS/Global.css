@@ -66,3 +66,50 @@ body{
     background-color: var(--Hover-Color);
     border-radius: 10px;
 }
+
+.off-screen-menu{
+    background-color: var(--BG-Color);
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    position: fixed;
+    right: -450px;
+    top: 76.6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    transition: .5s ease;
+}
+
+.off-screen-menu.active{
+    right: 0px;
+}
+
+.ham-menu{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+.ham-menu span{
+    height: 5px;
+    width: 100%;
+    background-color: var(--Text-Color);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s ease;
+}
+
+.ham-menu span:nth-child(1)  {
+    top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
