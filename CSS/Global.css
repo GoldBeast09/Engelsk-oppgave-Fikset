@@ -1,3 +1,4 @@
+/*Variable colors that i can change*/
 :root{
     --BG-Color: #0F172A;
     --BG-variant: #1E293B;
@@ -5,7 +6,7 @@
     --Hover-Color: #334155;
     --Border-Color: #334155;
 }
-
+/*same variabls but are active if the theme gets changed*/
 .lightmode{
     --BG-Color: #dfe6ee;
     --BG-variant: #FFFFFF;
@@ -14,12 +15,12 @@
     --Border-Color: #E5E7EB;
 }
 
-
+/*Background color of the entire page*/
 body{
     background-color:var(--BG-Color);
 }
 
-
+/*effects the text with the class text-style and removes the text decoration and makes the color of the text change depending on the theme*/
 .Text-style{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
@@ -27,22 +28,29 @@ body{
     text-decoration: none;
 }
 
-
+/*controls how the nav on the top of pages look*/
 .Nav{
+    /*uses flex to to put its children in a row*/
     display: flex;
     flex-direction: row;
+    /*the background color is a similar color compared to the backround of the rest of the page but a litle diffrent*/
     background-color: var(--BG-variant);
+    /*it takes up the entire width of the veiwport(what you can see on the website)*/
     width: 100vw;
+    /*the position is fixed to have no distance between the top and right*/
     position: fixed;
-    justify-content: space-evenly;
-    align-items: center;
     top: 0;
     left: 0;
+    /*the children of nav are spaced evenly across it on the y axis(left to right) and in the center of the x axis(up and down)*/
+    justify-content: space-evenly;
+    align-items: center;
+    /*it has a z index of 10 to be sure it is on top(probably not necessary but did it to be safe)*/
     z-index: 10;
     margin: 0;
     padding: 0;
     height: 75px;
     border: solid 1px, var(--Border-Color);
+    /*The font size changes depending on the size of the screen(first value min size second value preferd size third value max size)*/
     font-size: clamp(1rem, 1.5vw, 4rem);
 }
 
