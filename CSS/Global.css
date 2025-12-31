@@ -115,7 +115,7 @@ body{
 }
 
 #theme-switch{
-    background-color: var(--BG-Color);
+    background-color: var(--BG-variant);
     width: 100%;
     height: 75px;
     display: flex;
@@ -138,4 +138,12 @@ body{
 
 #theme-switch svg:first-child{
     display: none;
+}
+
+.lightmode #theme-switch svg:last-child{
+    display: none;
+}
+
+.lightmode #theme-switch svg:first-child{
+    display: block;
 }
