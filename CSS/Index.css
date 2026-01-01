@@ -1,18 +1,19 @@
+/*darkmode colors*/
 :root{
     --welcome-text: #F9FAFB;
     --Welcome-BG: #1E293B;
 }
-
+/*lightmode colors*/
 .lightmode{
     --welcome-text: #1E293B;
     --Welcome-BG:  #F9FAFB;
 }
-
+/*if the video overflows it gets hidden*/
 body {
     overflow: hidden;
 }
 
-
+/**/
 .BGvideo{
     position: absolute;
     right: 0;
@@ -44,5 +45,6 @@ body {
 #Welcome-Text{
     background-color: var(--Welcome-BG);
     color: var(--welcome-text);
-    padding: 0.5rem;
+    padding: 0.25em;
+    border-radius: 15px;
 }
