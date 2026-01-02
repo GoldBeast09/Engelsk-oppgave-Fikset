@@ -1,4 +1,11 @@
-
+:root{
+    --BG-variant: #1E293B;
+    --Border-Color: #334155;
+}
+.lightmode{
+    --BG-variant: #FFFFFF;
+    --Border-Color: #d3d3d3;
+}
 
 /* layout: place image on top and text below, centered card */
 main{
@@ -11,42 +18,38 @@ main{
 }
 
 .bullock-museum{
-    width: min(900px, 95%);
+    width: 50%;
     margin: 0 auto;
     display: flex;
     flex-direction: column; /* image on top, text below */
     gap: 1rem;
-    padding: 1rem;
-    color: #fff;
-    text-align: left;
-    background: rgba(255,255,255,0.02);
+    padding: 1em;
+    text-align: center;
+    background: var(--BG-variant);
     border-radius: 10px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.45);
+    font-size: 2rem;
+    line-height: 1.5;
 }
 
 /* image full width of the card, shorter height, keep aspect with object-fit */
 .bullock-museum img{
     width: 100%;
-    height: 400px;         /* adjust to make image shorter/taller */
+    height: clamp(300px 10vh 700px);        
     object-fit: cover;
     border-radius: 8px;
     display: block;
 }
 
-/* paragraphs styling under the image */
-.bullock-museum p{
-    margin: 0;
-    padding: 0 0.25rem;
-    line-height: 1.6;
-    color: #fff;
-}
+
 
 /* responsive: reduce image height and spacing on small screens */
-@media (max-width: 600px){
+@media (max-width: 900px){
     .bullock-museum{
+        width: 90vw;
         padding: 0.75rem;
+        font-size: 1rem;
     }
     .bullock-museum img{
-        height: 180px;
+        height: 300px;
     }
 }

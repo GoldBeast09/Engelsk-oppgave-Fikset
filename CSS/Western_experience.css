@@ -1,5 +1,14 @@
+:root{
+    --BG-variant: #1E293B;
+    --Border-Color: #334155;
+}
+.lightmode{
+    --BG-variant: #FFFFFF;
+    --Border-Color: #d3d3d3;
+}
+
 main{
-    padding-top: 90px; /* space for fixed header */
+    padding-top: 90px; 
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -7,32 +16,32 @@ main{
     box-sizing: border-box;
 }
 
-/* card that holds image + text, image on top, text below and centered */
+
 .Fort-worth-stockyards{
-    width: min(900px, 95%);
+    width: max(300px, 50%);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    color: #fff;
     text-align: center;
     box-sizing: border-box;
+    background-color: var(--BG-variant);
+    font-size: 1.5rem;
+    line-height: 1.5;
 }
 
-/* image: full width of the card, shorter height, keep aspect with object-fit */
+
 .Fort-worth-stockyards img{
     width: 100%;
-    max-width: 900px;
-    height: 260px;          /* adjust height as needed */
+    height: clamp(300px 10vh 700px);     
     object-fit: cover;
     border-radius: 8px;
     display: block;
 }
 
 
-/* responsive: reduce image height on small screens */
 @media (max-width: 600px){
     .Fort-worth-stockyards img{
         height: 180px;
