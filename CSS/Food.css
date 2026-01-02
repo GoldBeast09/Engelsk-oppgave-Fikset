@@ -1,57 +1,43 @@
-/* layout: three columns with image above text */
-main{
-    padding-top: 90px;               /* space for fixed header */
-    width: min(1200px, 96%);
-    margin: 0 auto 40px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    align-items: start;
-    box-sizing: border-box;
+:root{
+    --BG-variant: #1E293B;
+    --Text-Color: #F9FAFB;
+    --Border-Color: #334155;
 }
 
-/* style each restaurant card (targets the three divs inside main) */
+.lightmode{
+    --BG-variant: #FFFFFF;
+    --Text-Color: #111827;
+    --Border-Color: #d3d3d3;
+}
+
+
+main{
+    width: 96%;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin: 140px auto 0;
+}
+
 main > div{
-    background: rgba(255,255,255,0.03);
+    background-color: var(--BG-variant);
     border-radius: 10px;
     overflow: hidden;
-    color: #fff;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.45);
     display: flex;
-    flex-direction: column; /* img on top, text below */
+    flex-direction: column;
+    width: 33vw;
+    font-size: 1.5rem;
 }
 
-/* image styling: fixed height, cover, full width */
 main > div img{
     width: 100%;
-    height: 200px;          /* change to make image shorter/taller */
+    height: clamp(200px 10vh 500px);
     object-fit: cover;
     display: block;
 }
 
-/* text paragraphs inside the card */
 main > div p{
-    padding: 0.9rem 1rem;
-    margin: 0;
+    padding: 0.3em 0.5em;
     line-height: 1.4;
-    color: #fff;
 }
 
-/* optional: slightly larger first paragraph or spacing between paragraphs */
-main > div p + p{
-    margin-top: 0.6rem;
-}
-
-/* responsive: 2 columns then 1 column */
-@media (max-width: 900px){
-    main{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 600px){
-    main{
-        grid-template-columns: 1fr;
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-}
