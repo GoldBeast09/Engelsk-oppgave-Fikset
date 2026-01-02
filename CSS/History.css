@@ -1,34 +1,44 @@
-
+/*Variable colors that i can change*/
+:root{
+    --BG-variant: #1E293B;
+    --Border-Color: #334155;
+}
+/*same variabls but are active if the theme gets changed*/
+.lightmode{
+    --BG-variant: #FFFFFF;
+    --Border-Color: #d3d3d3;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
 
 main {
-    padding-top: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 1.5rem;
-    min-height: calc(100vh - 75px);
+    min-height: calc(100vh - 120px);
     position: relative;
     z-index: 1;
+    margin-top: 90px;
+    width: 50vw;
+    overflow: hidden;
+
 }
 .history-image1 img{
-    max-width: 100%;
-    width: min(900px, 95%);
-    height: 300px;      
+    width: 100%;
+    height: clamp(300px 5vh 900px);      
     object-fit: cover;  
     border-radius: 10px;
     display: block;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
 }
 .history1, .history2{
-    background: rgba(255,255,255,0.12); 
+    background: var(--BG-variant); 
     padding: 1.25rem;
     border-radius: 10px;
-    color: white; 
     line-height: 1.5;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-}
-@media (max-width: 768px){
-    .history-grid{
-        grid-template-columns: 1fr;
-    }
+    border-color: var(--Border-Color);
+    border: solid 1px;
 }
