@@ -10,7 +10,7 @@ main {
 
 
 iframe {
-    max-width: 100%;
+    width: 45vw;
     height: auto;
     aspect-ratio: 16/9;
 }
