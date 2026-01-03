@@ -1,13 +1,21 @@
-const likeButtonElement = document.getElementById('likeButton');
-const likesTextElement = document.getElementById('likesText');
+const likeButtons = document.querySelectorAll(".likeButton");
 
 const randomNum = (x) => {
-    return Math.floor(Math.random() * x);
-}
-
-const likeImage = () => {
-    console.log(`This is your random number from 0 to 100: ${randomNum(100)}`);
-    likesTextElement.textContent = randomNum(100);
+  return Math.floor(Math.random() * x);
 };
 
-likeButtonElement.addEventListener('click', likeImage);
+likeButtons.forEach((button) => {
+  const likesTextElement = button.querySelector(".likesText");
+  likesTextElement.textContent = randomNum(100);
+  let isLiked = false;
+
+  button.addEventListener("click", () => {
+    let currentCount = parseInt(likesTextElement.textContent);
+    if (isLiked === false) {
+      likesTextElement.textContent = currentCount + 1;
+    } else {
+      likesTextElement.textContent = currentCount - 1;
+    }
+    isLiked = !isLiked;
+  });
+});
