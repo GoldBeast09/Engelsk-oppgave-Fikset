@@ -1,13 +1,16 @@
 /*Variable colors that i can change*/
-:root{
+:root {
     --BG-Color: #0F172A;
     --BG-variant: #1E293B;
     --Text-Color: #F9FAFB;
     --Hover-Color: #334155;
     --Border-Color: #334155;
+
+    --NavBar-height: 5rem;
 }
+
 /*same variabls but are active if the theme gets changed*/
-.lightmode{
+.lightmode {
     --BG-Color: #dfe6ee;
     --BG-variant: #FFFFFF;
     --Text-Color: #111827;
@@ -16,12 +19,12 @@
 }
 
 /*Background color of the entire page*/
-body{
-    background-color:var(--BG-Color);
+body {
+    background-color: var(--BG-Color);
 }
 
 /*effects the text with the class text-style and removes the text decoration and makes the color of the text change depending on the theme*/
-.Text-style{
+.Text-style {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     color: var(--Text-Color);
@@ -29,7 +32,7 @@ body{
 }
 
 /*controls how the nav on the top of pages look*/
-.Nav{
+.Nav {
     /*uses flex to to put its children in a row*/
     display: flex;
     flex-direction: row;
@@ -45,10 +48,10 @@ body{
     justify-content: space-evenly;
     align-items: center;
     /*it has a z index of 10 to be sure it is on top(probably not necessary but did it to be safe)*/
-    z-index: 10;
+    z-index: 9999;
     margin: 0;
     padding: 0;
-    height: 75px;
+    height: var(--NavBar-height);
     border: solid 2px, var(--Border-Color);
     /*The font size changes depending on the size of the screen(first value min size second value preferd size third value max size)*/
     font-size: clamp(1rem, 1.5vw, 4rem);
@@ -57,46 +60,56 @@ body{
 }
 
 /*padding to the left and right*/
-.Item-Home, .Item-Pages{
+.Item-Home,
+.Item-Pages {
     padding-left: 15px;
     padding-right: 15px;
 
 }
+
 /*when a cursor hovers it get a backround with a radius of 10 px*/
-.Item-Home:hover, .Item-Pages:hover{
-    background-color: var(--Hover-Color) ;
+.Item-Home:hover,
+.Item-Pages:hover {
+    background-color: var(--Hover-Color);
     border-radius: 10px;
 }
 
 /*the syle for the hamburger menu*/
-.off-screen-menu{
-    background-color: var(--BG-Color);
-    height: 100vh;
+.off-screen-menu {
     width: 100%;
+    height: 100vh;
     max-width: 450px;
+
     position: fixed;
+
+    /* makes it 4.5 rem from the top so it is bellow the nav bar */
+    top: var(--NavBar-height);
     /*Fixed to have it on top of items when it is visable and moved off screen with right -450px*/
     right: -450px;
-    /*makes it be 76.6 px from the top so it is bellow the nav bar*/
-    top: 76.6px;
-    /*to make sure that the items inside of the nav bar stack nicely inside of the burger menu*/
+
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-size: 2rem;
-    /*has a transition so it dosnt just apear suddenly*/
-    transition: .5s ease;
+
+    background-color: var(--BG-Color);
+
     border-left: solid 4px var(--BG-variant);
+
+    /*to make sure that the items inside of the nav bar stack nicely inside of the burger menu*/
+    font-size: 2rem;
+
+    /*has a transition so it dosnt just apear suddenly*/
+    transition: all 0.5s ease-in-out;
 }
 
 /*when it gets activated by js it is 0px from the right so against the right edge*/
-.off-screen-menu.active{
+.off-screen-menu.active {
     right: 0px;
 }
 
 /*the size of the "box" the three lines are in*/
-.ham-menu{
+.ham-menu {
     height: 50px;
     width: 50px;
     /*relative so that we can place the lines on the top of it(its children)*/
@@ -105,7 +118,7 @@ body{
 }
 
 /*the stye of the lines and centerd inside of the ham-menu*/
-.ham-menu span{
+.ham-menu span {
     height: 5px;
     width: 100%;
     background-color: var(--Text-Color);
@@ -117,16 +130,17 @@ body{
 }
 
 /*moves the first line up*/
-.ham-menu span:nth-child(1)  {
+.ham-menu span:nth-child(1) {
     top: 25%;
 }
+
 /*moves the third line down(all lines are 25% from eachother)*/
 .ham-menu span:nth-child(3) {
     top: 75%;
 }
 
 /*style for the theme switch buttona*/
-#theme-switch{
+#theme-switch {
     background-color: var(--BG-variant);
     width: 100%;
     height: 75px;
@@ -134,20 +148,20 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 1.5rem;    
+    font-size: 1.5rem;
     cursor: pointer;
     border: solid var(--Border-Color);
     border-radius: 15px;
 }
 
 /*Moves the icon/svg 20 px to the left and changes its color depending on the theme*/
-#theme-switch svg{
+#theme-switch svg {
     margin-left: 20px;
     fill: var(--Text-Color);
 }
 
 /*After all items in the button theme switch the string "theme toggle gets added"*/
-#theme-switch::after{
+#theme-switch::after {
     content: 'Theme Toggle';
     /*to have a little "breathing room" between the text and icon*/
     margin-left: 10px;
@@ -155,14 +169,16 @@ body{
 }
 
 /*does not display the moon on dark mode*/
-#theme-switch svg:first-child{
+#theme-switch svg:first-child {
     display: none;
 }
+
 /*hides the sun on light mode*/
-.lightmode #theme-switch svg:last-child{
+.lightmode #theme-switch svg:last-child {
     display: none;
 }
+
 /*forces it self on the top so it is visable*/
-.lightmode #theme-switch svg:first-child{
+.lightmode #theme-switch svg:first-child {
     display: block;
 }
