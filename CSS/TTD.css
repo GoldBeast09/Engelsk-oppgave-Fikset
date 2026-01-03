@@ -1,15 +1,14 @@
-:root{
+:root {
     --Text-Over-Picture: #F9FAFB;
     --BG-Text-Over-Picture: #1e293b;
 }
 
-.lightmode{
+.lightmode {
     --Text-Over-Picture: #111827;
     --BG-Text-Over-Picture: #dfe6ee;
 }
 
-
-main{
+main {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -21,42 +20,42 @@ main{
     min-height: calc(100vh - 180px);
 }
 
-main > div {
-    flex: 1 1 auto;
+.itemFlex {
     width: clamp(300px, 30vw, 1400px);
+
+    position: relative;
+
+    flex: 1 1 auto;
+
     border: solid 2px;
     border-radius: 10px;
+
     overflow: hidden;
-    position: relative;
     aspect-ratio: 1.5/1;
-}
 
-
-.zoom-image{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease ;
-}
-
-
-.Item-Flex1:hover .zoom-image, .Item-Flex2:hover .zoom-image, .Item-Flex3:hover .zoom-image{
-    transform: scale(1.2);
-}
-
-
-.align-text{
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
 }
 
-.Text_over_picture{
+.zoom-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.itemFlex:hover .zoom-image {
+    transform: scale(1.2);
+}
+
+.align-text {
+    position: absolute;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.textOverPicture {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     color: var(--Text-Over-Picture);
@@ -65,4 +64,3 @@ main > div {
     padding: 0.5em;
     border-radius: 10px;
 }
-
