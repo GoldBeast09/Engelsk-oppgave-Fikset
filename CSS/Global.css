@@ -57,13 +57,13 @@ body{
 }
 
 /*padding to the left and right*/
-.Item-Home, .Item-Center{
+.Item-Home, .Item-Pages{
     padding-left: 15px;
     padding-right: 15px;
 
 }
 /*when a cursor hovers it get a backround with a radius of 10 px*/
-.Item-Home:hover, .Item-Center:hover{
+.Item-Home:hover, .Item-Pages:hover{
     background-color: var(--Hover-Color) ;
     border-radius: 10px;
 }
