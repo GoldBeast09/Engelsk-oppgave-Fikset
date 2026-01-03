@@ -4,7 +4,7 @@
     --BG-variant: #1E293B;
     --Text-Color: #F9FAFB;
     --Hover-Color: #334155;
-    --Border-Color: #334155;
+    --Border-Color: #242f3f;
 
     --NavBar-height: 5rem;
 }
@@ -123,6 +123,8 @@ body {
 
     transform: rotate(0deg);
     transition: transform 0.8s ease-in-out;
+
+    fill: var(--Text-Color);
 }
 
 .ham-menu.active svg {

@@ -8,7 +8,7 @@
     <title>Texas</title>
     <link rel="stylesheet" href="../CSS/Food.css">
     <link rel="stylesheet" href="../CSS/Global.css">
-    <script type="text/javascript" src="JS/Theme-Change.js" defer></script>
+    <script type="text/javascript" src="../JS/Theme-Change.js" defer></script>
 </head>
 
 <body>
@@ -72,8 +72,10 @@
     </Header>
     <main>
         <div class="Resturant1">
-            <img src="../Bilder/Franklin_Barbecue_Austin_About_to_Open.jpg"
-                alt="Franklin Barbecue Austin About to Open">
+            <div class="imageHolder">
+                <img src="../Bilder/Franklin_Barbecue_Austin_About_to_Open.jpg"
+                    alt="Franklin Barbecue Austin About to Open">
+            </div>
             <div class="Text-style">
                 <p>Franklin Barbecue is a restaurant in Austin, Texas that is open only for lunch time Tuesday to Sunday
                     and is closed on Monday. The owner of the restaurant Aaron Franklin has won many awards and been
@@ -89,7 +91,10 @@
             </div>
         </div>
         <div class="Resturant2">
-            <img src="../Bilder/Saltgrass steakhouse.jpg" alt="Ourside of saltgrass steakhouse">
+            <div class="imageHolder">
+                <img src="../Bilder/Saltgrass steakhouse.jpg" alt="Ourside of saltgrass steakhouse">
+                <button class="likeButton" id="likeButton">👍<span id="likesText">52</span></button>
+            </div>
             <div class="Text-style">
                 <p>Saltgrass Steakhouse Has multiple locations across Texas. It is a semi-fancy restaurant. </p>
                 <p>The menu includes appetizers, ( soup, salad and sandwiches), Steaks, additions for the steaks,
@@ -98,7 +103,9 @@
             </div>
         </div>
         <div class="Resturant3">
-            <img src="../Bilder/Brenner's on the bayou.jpg" alt="Outside of Brenner's on the Bayou">
+            <div class="imageHolder">
+                <img src="../Bilder/Brenner's on the bayou.jpg" alt="Outside of Brenner's on the Bayou">
+            </div>
             <div class="Text-style">
                 <p>Brenner's on the Bayou is a more fancy steakhouse sounded by gardens and a view of Buffalo Bayou,
                     they have a suggested attire one their website of business or dressy casual. </p>
@@ -109,6 +116,7 @@
         </div>
     </main>
     <script src="../JS/Ham-Menu.js"></script>
+    <script src="../JS/Like-button.js"></script>
 </body>
 
 </html>
