@@ -4,7 +4,7 @@
     --BG-variant: #1E293B;
     --Text-Color: #F9FAFB;
     --Hover-Color: #334155;
-    --Border-Color: #334155;
+    --Border-Color: #242f3f;
 
     --NavBar-height: 5rem;
 }
@@ -110,15 +110,32 @@ body {
 
 /*the size of the "box" the three lines are in*/
 .ham-menu {
-    height: 50px;
     width: 50px;
+    height: 50px;
     /*relative so that we can place the lines on the top of it(its children)*/
     position: relative;
     cursor: pointer;
 }
 
+.ham-menu svg {
+    width: 100%;
+    height: 100%;
+
+    transform: rotate(0deg);
+    transition: transform 0.8s ease-in-out;
+
+    fill: var(--Text-Color);
+}
+
+.ham-menu.active svg {
+    width: 100%;
+    height: 100%;
+
+    transform: rotate(180deg);
+}
+
 /*the stye of the lines and centerd inside of the ham-menu*/
-.ham-menu span {
+/* .ham-menu span {
     height: 5px;
     width: 100%;
     background-color: var(--Text-Color);
@@ -127,7 +144,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+} */
 
 /*moves the first line up*/
 .ham-menu span:nth-child(1) {
